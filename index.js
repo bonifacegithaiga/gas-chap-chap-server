@@ -52,5 +52,75 @@ app.get("/api/admin", (req, res) => {
     });
 
 })
+app.post("/api/admin", (req, res) =>{const {weight,type_of_gas,price,image_url} = req.body;
+if(!weight||!type_of_gas||!price){
+    return res.status(400).json({ error: "invalid payload"});
+}
 
-app.listen(9000, () => { console.log("running server") })
+pool.query(
+    "INSERT INTO gas (weight,type_of_gas,price,image_url) VALUES (?,?,?,?)",
+    [weight,type_of_gas,price,image_url],
+    (error, results) =>{
+        if (error){
+            return res.status(500).json({error});
+        }
+
+        res.json(results.insertId);
+
+    }
+);
+});
+// app.post("/api/customer", (req, res) => {
+//     const{name,location,phone_no} =req.body;
+// if(!name||!location||!phone_no){
+//     return res.status(400).json({error: "invalid payload"});
+// }
+//     pool.query(
+//         "INSERT INTO client (name,location,phone_no) VALUES (?,?,?)",
+//         [name,location,phone_no],
+//         (error, results) =>{
+//         if (eror){
+//             return res.status(500).json({error});
+//         }
+//         res.json(results.insertId);
+//         })
+app.post("/api/customer",(req,res)=>{
+    const {username,location,phone_no,gas_id}=req.body;
+    if(!username||!location||!phone_no||!gas_id){
+        return res.status(400).json({error:"Invalid payload"});
+    }
+     pool.query("INSERT INTO clients(username,location,phone_no,gas_id) VALUES (?,?,?,?)",[username,location,phone_no,gas_id],(error,results)=>{
+        if(error){
+            return res.status(500).json({error});
+        }
+        res.json(results.insertId);
+
+    })
+})
+
+app.put("/api/admin/:id", (req, res) => {
+    const gas= req.body;
+    const id=[req.params.id];
+
+    if (!gas.type_of_gas||!gas.weight||!gas.price) {
+        return res.status(400).json({ error: "Invalid paylooad"});
+
+    }
+
+    pool.query(
+        "UPDATE gas SET type_of_gas =?,weight=?,price=? WHERE gas_id = ?",
+        [gas.type_of_gas,gas.weight,gas.price, id],
+        (error, results) => {
+            if (error) {
+                return res.status(500).json({ error});
+            }
+            res.json(results.changedRows);
+        }
+    );
+});
+app.listen(9000,()=>{
+    console.log("bonnie is happy");
+})
+
+
+
