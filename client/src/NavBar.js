@@ -1,14 +1,14 @@
 import React from "react";
 
-function NarBar() {
+function NavBar() {
     return (
         <div className="gcc-container">
             <nav className="gcc-nav">
                  <span className="gcc-title">Gas Chap Chap</span>
-                 <a href="/">Home</a>
-                 <a href="/">Customer</a>
-                 <a href="/">Order</a>
-                 <a href="/">Admin</a>
+                 <a href="/>home">Home</a>
+                 <a href="/>customer">Customer</a>
+                 <a href="/>order">Order</a>
+                 <a href="/>admin">Admin</a>
                  
             </nav>
         </div>
