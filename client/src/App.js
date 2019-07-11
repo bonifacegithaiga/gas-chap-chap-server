@@ -5,18 +5,16 @@ import "./App.css";
 
 const parent= [
   {
-    gas_id: 1,
-    weight: 6,
-    type_of_gas: "PRO - GAS",
-    price: 900,
-    image_url:"http://www.254news.co.ke/wp-content/uploads/2019/04/FB_IMG_1556339216386.jpg"
+    image_url:"https://whownskenya.com/wp-content/uploads/2019/04/pro1.jpg",
+  type_of_gas:"PRO-GAS",
+
   },
   {
-    gas_id: 2,
+    gas_id:2,
     weight: 6,
-    type_of_gas: "hashi",
+    type_of_gas: "K-GAS",
     price: 900,
-    image_url:"//encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6olz88LxP8HNU5AVDe-2EwixSHKmHnMe-Yjg74garwbex9r26"
+    image_url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6olz88LxP8HNU5AVDe-2EwixSHKmHnMe-Yjg74garwbex9r26"
   },
   {
     gas_id: 3,

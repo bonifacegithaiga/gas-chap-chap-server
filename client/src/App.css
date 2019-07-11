@@ -31,3 +31,63 @@
                      letter-spacing: -0.069em;
                      padding-right: 10px;
                     }
+
+               
+                    .gcc-gaschapchap-listing {
+                         display:flex;
+                         flex-direction:row;
+                         flex-wrap:wrap;
+                         justify-content:center;
+               }
+
+               .gcc-type_of_gas {
+
+                    display: flex;
+                    flex-direction: column;
+                    border-radius: 0.25rem;
+                    background-color: blue;
+                    margin: 15px;
+                    width: 280px;
+
+               }
+
+               .gcc-type_of_gas .gcc-image {
+                    width: 100%;
+                    height: 280px;
+                    object-fit: cover;
+
+               }
+
+               .gcc-type_of_gas-body {
+                    padding: 1rem 1.5rem;
+                    text-align: center;
+
+               } 
+
+               .gcc-type_of_gas .gcc-title {
+                    font-size: 1.25rem;
+                    margin-bottom: 0.5rem;
+                    font-weight:700;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+               }
+
+               .gcc-btn {
+                    color: aqua;
+                    padding:  0.5rem 1rem;
+                    font-weight:700;
+                    border-radius: 0.25rem;
+                    background-color:aquamarine;
+     
+               }
+
+               .gcc-btn.gcc-btn-order {
+                    padding: 0.5rem 3.5rem;
+                    text-decoration: brown;
+               }
+               
+
+               
+
+
