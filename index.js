@@ -11,6 +11,16 @@ const pool = mysql.createPool({
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+app.get("/api/gaschapchapdisplay",(req, res) => {
+    pool.query("select image_url,type_of_gas FROM gas", (error , rows) => {
+        if (error) {
+            return res.status(500).json({error});
+        }
+        res.json(rows);
+        console.log(rows)
+    });
+});
+
 
 app.get("/api/home", (req, res) => {
     pool.query("select image_url,type_of_gas,price FROM gas", (error, rows) => {

@@ -29,8 +29,16 @@
                      font-size: 23px;
                      font-weight: 800;
                      letter-spacing: -0.069em;
+
                      padding-right: 10px;
                     }
+
+                .gcc-nav >a:nth-child(6) {
+                     font-size:23px;
+                     font-weight: 800;
+                     letter-spacing: -0.069em;
+                     padding-right: 10px;
+                }
 
                
                     .gcc-gaschapchap-listing {

@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/bonifacegithaiga/gas-chap-chap-server#readme",
   "dependencies": {
+    "@reach/router": "^1.2.1",
     "concurrently": "^4.1.0",
     "dotenv": "^8.0.0",
     "express": "^4.16.4",
