@@ -1,7 +1,11 @@
 import React from "react";
 import NavBar from "./NavBar";
-import {Router} from "@reach/router";
+import { Router } from "@reach/router";
+import NotFound from "./NotFound";
 import Gaschapchaplistings from "./Gaschapchaplistings";
+import Customer from "./Customer";
+import OrderPage from "./OrderPage";
+import AdminPage from "./AdminPage";
 import "./App.css";
 
 // const parent= [
@@ -38,17 +42,22 @@ function App() {
   return (
     <div className="gcc-app">
       <header className="gcc-header">
+        {/* <Router> */}
+          <NavBar default />
+        {/* </Router> */}
+
+      </header>
+      <main className="gcc-main">
         <Router>
-<NavBar default />
-        </Router>
+          <Gaschapchaplistings path="/" />
+          <Customer path="/customer" />
+          <OrderPage path="/order" />
+          <AdminPage path="/admin" />
+          <NotFound default />
         
-        </header>
-        <main className="gcc-main">
-       <Router>
-       <Gaschapchaplistings path="/" />
-       </Router>
-        </main>
-      </div>
+        </Router>
+      </main>
+    </div>
   );
 }
 

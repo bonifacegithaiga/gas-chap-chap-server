@@ -7,8 +7,9 @@ class Gaschapchaplistings extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            gaschapchapdisplay: [],
+            gaschapchapdisplay: []
         };
+        
     }
 
     componentDidMount() {
@@ -35,6 +36,8 @@ class Gaschapchaplistings extends React.Component {
                 });
             });
     }
+
+    
     render() {
         const { gaschapchapdisplay } = this.state;
 
@@ -47,6 +50,8 @@ class Gaschapchaplistings extends React.Component {
                 {gaschapchapdisplay.map(m => (
                         <GasChapChap key={m.id} gaschapchapdisplay={m} />
                     ))}
+
+                   
 
                 </div>
             </div>
